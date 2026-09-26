@@ -1,3 +1,11 @@
+﻿/* Eliminar el resaltado azul en botones y enlaces (Móvil y PC) */
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+a:focus, button:focus {
+  outline: none;
+}
 /* =========================================
    MILLER'S CODE - APPLE VISION LIQUID GLASS
    ========================================= */
@@ -291,3 +299,4 @@ body {
 @media (prefers-color-scheme: dark) {
   /* Si decides soportarlo luego, las variables se cambian aquí */
 }
+
