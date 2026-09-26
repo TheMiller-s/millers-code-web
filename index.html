@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miller's Code — Web Studio</title>
+  <title>Miller's Code - Web Studio</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,136 +19,121 @@
 
   <header class="minimal-nav">
     <div class="nav-container">
-      <a href="#" class="brand-logo">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
         Miller's<span class="brand-accent">Code</span><span class="brand-dot">.</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html#servicios" class="liquid-link">Servicios</a>
+        <a href="index.html" class="liquid-link">Inicio</a>
         <a href="portafolio.html" class="liquid-link">Portafolio</a>
-        <a href="index.html#contacto" class="liquid-button">Contactar</a>
+        <a href="#contacto" class="liquid-button">Contactar</a>
       </nav>
     </div>
   </header>
 
   <!-- CONTENEDOR DE SCROLL (MÁSCARA DE DESVANECIMIENTO) -->
   <main class="page-scroll-container">
+    
+    <!-- Hero Section -->
     <section class="hero-section">
-      <div class="hero-container">
+      <div class="hero-content">
         <h1 class="hero-title">
           Menos plantillas.<br>
-          Más código con propósito.
+          Más código con <br>propósito.
         </h1>
-        
-        <p class="hero-description">
+        <p class="hero-subtitle">
           Estudio de desarrollo frontend especializado en interfaces interactivas, limpias y de alto rendimiento.
         </p>
-        
         <div class="hero-actions">
-          <a href="#contacto" class="liquid-button large">Ver Casos de Éxito</a>
+          <a href="portafolio.html" class="liquid-button large">Ver Casos de Éxito</a>
         </div>
       </div>
-    <!-- Solicitud Personalizada -->
-    <div style="margin-top: 60px; text-align: center; pointer-events: auto;">
-      <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">¿Necesitas algo más complejo?</h3>
-      <p style="color: var(--text-gray); margin-bottom: 20px;">Sistemas ERP, SaaS, Integraciónes con APIs o Arquitecturas Empresariales.</p>
-      <a href="#contacto" class="liquid-button" style="background: #111; color: #fff;">Solicitud Personalizada</a>
-    </div>
-  </section>
+    </section>
+
     <!-- Seccion: Sobre el Estudio -->
-  <section id="sobre-nosotros" style="padding: 100px 40px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
-    <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
-      <div style="flex: 1; min-width: 300px;">
-        <span class="card-tag tag-basic" style="margin-bottom: 15px;">Sobre el Estudio</span>
-        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 25px;">No alquilamos plantillas.<br>Construimos herramientas.</h2>
-        <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
-          En Ecuador, la mayoría de agencias te venden la misma plantilla de Shopify o WordPress, cobrándote mensualidades abusivas por un diseño que se ve igual al de tu competencia.
-        </p>
-        <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7;">
-          En <strong>Miller's Code</strong>, programamos desde cero. Creamos sistemas interactivos, ultrarrápidos y diseñados exclusivamente para la identidad de tu marca. Tú eres el dueño de tu código, sin alquileres eternos.
-        </p>
-      </div>
-      <div style="flex: 1; min-width: 300px;">
-        <div style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 1); border-radius: 32px; padding: 40px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);">
-          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px;">Nuestra Filosofía Técnica</h3>
-          <ul class="card-list" style="margin-bottom: 0;">
-            <li><span class="icon-check">✓</span> <span>Arquitectura 100% a medida.</span></li>
-            <li><span class="icon-check">✓</span> <span>Optimización para 60 FPS.</span></li>
-            <li><span class="icon-check">✓</span> <span>Sistemas y lógicas de negocio (Backend).</span></li>
-            <li><span class="icon-check">✓</span> <span>Diseño UX/UI nivel Silicon Valley.</span></li>
-          </ul>
+    <section id="sobre-nosotros" style="padding: 100px 40px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
+      <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
+        <div style="flex: 1; min-width: 300px;">
+          <span class="card-tag tag-basic" style="margin-bottom: 15px;">Sobre el Estudio</span>
+          <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 25px;">No alquilamos plantillas.<br>Construimos herramientas.</h2>
+          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+            En Ecuador, la mayoría de agencias te venden la misma plantilla de Shopify o WordPress, cobrándote mensualidades abusivas por un diseño que se ve igual al de tu competencia.
+          </p>
+          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7;">
+            En <strong>Miller's Code</strong>, programamos desde cero. Creamos sistemas interactivos, ultrarrápidos y diseñados exclusivamente para la identidad de tu marca. Tú eres el dueño de tu código, sin alquileres eternos.
+          </p>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <div style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 1); border-radius: 32px; padding: 40px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);">
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px;">Nuestra Filosofía Técnica</h3>
+            <ul class="card-list" style="margin-bottom: 0;">
+              <li><span class="icon-check">✓</span><span>Arquitectura 100% a medida.</span></li>
+              <li><span class="icon-check">✓</span><span>Optimización para 60 FPS.</span></li>
+              <li><span class="icon-check">✓</span><span>Sistemas y lógicas de negocio (Backend).</span></li>
+              <li><span class="icon-check">✓</span><span>Diseño UX/UI nivel Silicon Valley.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Solicitud Personalizada -->
-    <div style="margin-top: 60px; text-align: center; pointer-events: auto;">
-      <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">¿Necesitas algo más complejo?</h3>
-      <p style="color: var(--text-gray); margin-bottom: 20px;">Sistemas ERP, SaaS, Integraciónes con APIs o Arquitecturas Empresariales.</p>
-      <a href="#contacto" class="liquid-button" style="background: #111; color: #fff;">Solicitud Personalizada</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Seccion: Servicios y Precios -->
-  <section id="servicios" style="padding: 100px 40px 150px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; pointer-events: none;">
-    <div style="text-align: center; margin-bottom: 60px; pointer-events: auto;">
-      <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;">Planes de Desarrollo</h2>
-      <p style="color: var(--text-gray); font-size: 1.1rem;">Inversiones claras. Soluciones rentables.</p>
-    </div>
-
-    <div class="comparison-grid" style="pointer-events: auto;">
-      
-      <!-- Plan 1 -->
-      <div class="card-basic" style="text-align: center;">
-        <h3 class="card-title" style="margin-bottom: 5px;">Presencia Premium</h3>
-        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 20px;">Landing Page de Alto Impacto</p>
-        
-        <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-          <li><span class="icon-check">✓</span> <span>Diseño responsivo único.</span></li>
-          <li><span class="icon-check">✓</span> <span>Botón de WhatsApp integrado.</span></li>
-          <li><span class="icon-check">✓</span> <span>Animaciones fluidas base.</span></li>
-        </ul>
-        <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+    <!-- Seccion: Servicios y Precios -->
+    <section id="servicios" style="padding: 100px 40px 150px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; pointer-events: none;">
+      <div style="text-align: center; margin-bottom: 60px; pointer-events: auto;">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;">Planes de Desarrollo</h2>
+        <p style="color: var(--text-gray); font-size: 1.1rem;">Inversiones claras. Soluciones rentables.</p>
       </div>
 
-      <!-- Plan 2 (Destacado) -->
-      <div class="card-premium" style="text-align: center; transform: scale(1.05); z-index: 2;">
-        <span class="card-tag tag-premium" style="display: inline-block; margin-bottom: 10px;">El Estándar Miller's</span>
-        <h3 class="card-title" style="margin-bottom: 5px;">Sistema Interactivo</h3>
-        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 20px;">App Web / Herramienta de Negocio</p>
+      <div class="comparison-grid" style="pointer-events: auto;">
         
-        <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-          <li><span class="icon-check">✓</span> <span>Lógicas personalizadas (Colas, QR).</span></li>
-          <li><span class="icon-check">✓</span> <span>Integración FinTech (Pagos).</span></li>
-          <li><span class="icon-check">✓</span> <span>Panel de control secreto (Backend).</span></li>
-          <li><span class="icon-check">✓</span> <span>Efectos Liquid Glass / Dark Mode.</span></li>
-        </ul>
-        <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+        <!-- Plan 1 -->
+        <div class="card-basic" style="text-align: center;">
+          <h3 class="card-title" style="margin-bottom: 5px;">Presencia Premium</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">Landing Page de Alto Impacto</p>
+          <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
+            <li><span class="icon-check">✓</span><span>Diseño responsivo único.</span></li>
+            <li><span class="icon-check">✓</span><span>Botón de WhatsApp integrado.</span></li>
+            <li><span class="icon-check">✓</span><span>Animaciones fluidas base.</span></li>
+          </ul>
+          <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+        </div>
+
+        <!-- Plan 2 (Destacado) -->
+        <div class="card-premium" style="text-align: center; transform: scale(1.05); z-index: 2;">
+          <span class="card-tag tag-premium" style="display: inline-block; margin-bottom: 10px;">El Estándar Miller's</span>
+          <h3 class="card-title" style="margin-bottom: 5px;">Sistema Interactivo</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">App Web / Herramienta de Negocio</p>
+          <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Lógicas personalizadas (Colas, QR).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Integración FinTech (Pagos).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Panel de control secreto (Backend).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Efectos Liquid Glass / Dark Mode.</span></li>
+          </ul>
+          <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto; background: #fff; color: #000; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Solicitar</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="card-basic" style="text-align: center;">
+          <h3 class="card-title" style="margin-bottom: 5px;">Plataforma Corporativa</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">Múltiples Páginas / E-Commerce</p>
+          <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
+            <li><span class="icon-check">✓</span><span>Arquitectura multi-página (SEO).</span></li>
+            <li><span class="icon-check">✓</span><span>Catálogo de productos dinámico.</span></li>
+            <li><span class="icon-check">✓</span><span>Panel de administración CMS.</span></li>
+          </ul>
+          <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+        </div>
+
       </div>
 
-      <!-- Plan 3 -->
-      <div class="card-basic" style="text-align: center;">
-        <h3 class="card-title" style="margin-bottom: 5px;">Plataforma Corporativa</h3>
-        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 20px;">Múltiples Páginas / E-Commerce</p>
-        
-        <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-          <li><span class="icon-check">✓</span> <span>Arquitectura multi-página (SEO).</span></li>
-          <li><span class="icon-check">✓</span> <span>Catálogo de productos dinámico.</span></li>
-          <li><span class="icon-check">✓</span> <span>Panel de administración CMS.</span></li>
-        </ul>
-        <a href="#contacto" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+      <!-- Solicitud Personalizada (Solo una vez) -->
+      <div style="margin-top: 60px; text-align: center; pointer-events: auto;">
+        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">¿Necesitas algo más complejo?</h3>
+        <p style="color: var(--text-gray); margin-bottom: 20px;">Sistemas ERP, SaaS, Integraciones con APIs o Arquitecturas Empresariales.</p>
+        <a href="#contacto" class="liquid-button" style="background: #111; color: #fff;">Solicitud Personalizada</a>
       </div>
-
-    </div>
-    <!-- Solicitud Personalizada -->
-    <div style="margin-top: 60px; text-align: center; pointer-events: auto;">
-      <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">¿Necesitas algo más complejo?</h3>
-      <p style="color: var(--text-gray); margin-bottom: 20px;">Sistemas ERP, SaaS, Integraciónes con APIs o Arquitecturas Empresariales.</p>
-      <a href="#contacto" class="liquid-button" style="background: #111; color: #fff;">Solicitud Personalizada</a>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
