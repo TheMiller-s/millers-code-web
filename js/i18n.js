@@ -35,7 +35,7 @@
     plan2_f5: "Efectos visuales premium (Liquid Glass / Dark Mode).",
     plan2_f6: "Arquitectura propia sin mensualidades forzosas.",
     plan3_title: "Plataforma Corporativa",
-    plan3_desc: "Múltiples Páginas / E-Commerce",
+    plan3_desc: "Múltiplas Páginas / E-Commerce",
     plan3_f1: "Arquitectura multi-página con SEO Avanzado.",
     plan3_f2: "Catálogo dinámico de productos y servicios.",
     plan3_f3: "Panel de administración autogestionable (CMS).",
@@ -345,16 +345,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const applyTranslations = (lang) => {
+    // 1. Traducir textos visibles
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
-        if (el.tagName === 'A' && el.href.includes('wa.me')) {
-          // Si es un boton de WhatsApp, actualizamos el parametro text de la url
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    // 2. Traducir parametros de WhatsApp
+    document.querySelectorAll('[data-wa]').forEach(el => {
+      const key = el.getAttribute('data-wa');
+      if (translations[lang] && translations[lang][key] && el.tagName === 'A') {
+        try {
           const url = new URL(el.href);
           url.searchParams.set('text', translations[lang][key]);
           el.href = url.toString();
-        } else {
-          el.innerHTML = translations[lang][key];
+        } catch (e) {
+          console.error("Error updating WhatsApp link:", e);
         }
       }
     });
