@@ -1,4 +1,4 @@
-/* --- PORTFOLIO SECTION (COMPARISON) --- */
+﻿/* --- PORTFOLIO SECTION (COMPARISON) --- */
 .portfolio-section {
   padding: 160px 40px 100px;
   max-width: 1200px;
@@ -36,13 +36,13 @@
 /* La cuadrícula de 2 columnas */
 .comparison-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: stretch;
   gap: 30px;
   margin-bottom: 80px;
 }
 
 /* Tarjeta Izquierda (Diseño Tradicional) */
-.card-basic {
+.card-basic { display: flex; flex-direction: column;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 32px;
@@ -52,7 +52,7 @@
 }
 
 /* Tarjeta Derecha (La Experiencia Miller's) */
-.card-premium {
+.card-premium { display: flex; flex-direction: column;
   /* Efecto Apple Liquid Glass en formato grande */
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(12px) saturate(180%);
@@ -124,10 +124,11 @@
   .comparison-grid {
     grid-template-columns: 1fr;
   }
-  .card-basic, .card-premium {
+  .card-basic, .card-premium { display: flex; flex-direction: column;
     padding: 30px 20px;
   }
 }
 
 .project-card { will-change: transform, backdrop-filter; transform: translateZ(0); }
+
 
