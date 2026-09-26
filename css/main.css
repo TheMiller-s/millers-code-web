@@ -268,14 +268,18 @@ body {
   }
 
   .nav-links {
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   }
   
-  .liquid-link {
-    font-size: 0.85rem;
-    padding: 8px 14px;
+  .nav-links a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0 !important;
+    font-size: 0.9rem !important;
+    min-width: 100px;
   }
 
   .hero-section {
