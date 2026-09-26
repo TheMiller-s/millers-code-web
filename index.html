@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,33 @@
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/portfolio.css">
+  
+  <style>
+    /* Language Selector Styles */
+    .lang-selector {
+      display: flex;
+      gap: 8px;
+      margin-left: 20px;
+      align-items: center;
+    }
+    .lang-selector button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+      opacity: 0.5;
+    }
+    .lang-selector button:hover {
+      transform: scale(1.2);
+      opacity: 0.8 !important;
+    }
+    @media (max-width: 768px) {
+      .lang-selector { margin-left: 0; margin-top: 10px; width: 100%; justify-content: center; }
+    }
+  </style>
+  <script src="js/i18n.js"></script>
 </head>
 <body>
 
@@ -22,10 +49,18 @@
       <a href="index.html" class="brand-logo" style="text-decoration: none;">
         Miller's<span class="brand-accent">Code</span><span class="brand-dot">.</span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html" class="liquid-link">Inicio</a>
-        <a href="portafolio.html" class="liquid-link">Portafolio</a>
-        <a href="#contacto" class="liquid-button">Contactar</a>
+      <nav class="nav-links" style="display: flex; align-items: center; flex-wrap: wrap;">
+        <a href="index.html" class="liquid-link" data-i18n="nav_home">Inicio</a>
+        <a href="portafolio.html" class="liquid-link" data-i18n="nav_portfolio">Portafolio</a>
+        <a href="#contacto" class="liquid-button" data-i18n="nav_contact">Contactar</a>
+        
+        <div class="lang-selector">
+          <button onclick="window.changeLanguage('es')" data-lang="es" title="Español">🇪🇸</button>
+          <button onclick="window.changeLanguage('en')" data-lang="en" title="English">🇺🇸</button>
+          <button onclick="window.changeLanguage('de')" data-lang="de" title="Deutsch">🇩🇪</button>
+          <button onclick="window.changeLanguage('fr')" data-lang="fr" title="Français">🇫🇷</button>
+          <button onclick="window.changeLanguage('pt')" data-lang="pt" title="Português">🇧🇷</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -36,15 +71,15 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-container">
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n="hero_title">
           Menos plantillas.<br>
           Más código con <br>propósito.
         </h1>
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="hero_desc">
           Estudio de desarrollo frontend especializado en interfaces interactivas, limpias y de alto rendimiento.
         </p>
         <div class="hero-actions">
-          <a href="portafolio.html" class="liquid-button large">Ver Casos de Éxito</a>
+          <a href="portafolio.html" class="liquid-button large" data-i18n="hero_cta">Ver Casos de Éxito</a>
         </div>
       </div>
     </section>
@@ -53,23 +88,23 @@
     <section id="sobre-nosotros" style="padding: 100px 40px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
       <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
         <div style="flex: 1; min-width: 300px;">
-          <span class="card-tag tag-basic" style="margin-bottom: 15px;">Sobre el Estudio</span>
-          <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 25px;">No alquilamos plantillas.<br>Construimos herramientas.</h2>
-          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+          <span class="card-tag tag-basic" style="margin-bottom: 15px;" data-i18n="about_tag">Sobre el Estudio</span>
+          <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 25px;" data-i18n="about_title">No alquilamos plantillas.<br>Construimos herramientas.</h2>
+          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;" data-i18n="about_p1">
             En Ecuador, la mayoría de agencias te venden la misma plantilla de Shopify o WordPress, cobrándote mensualidades abusivas por un diseño que se ve igual al de tu competencia.
           </p>
-          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7;">
+          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.7;" data-i18n="about_p2">
             En <strong>Miller's Code</strong>, programamos desde cero. Creamos sistemas interactivos, ultrarrápidos y diseñados exclusivamente para la identidad de tu marca. Tú eres el dueño de tu código, sin alquileres eternos.
           </p>
         </div>
         <div style="flex: 1; min-width: 300px;">
           <div style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 1); border-radius: 32px; padding: 40px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);">
-            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px;">Nuestra Filosofía Técnica</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px;" data-i18n="about_phil_title">Nuestra Filosofía Técnica</h3>
             <ul class="card-list" style="margin-bottom: 0;">
-              <li><span class="icon-check">✓</span><span>Arquitectura 100% a medida.</span></li>
-              <li><span class="icon-check">✓</span><span>Optimización para 60 FPS.</span></li>
-              <li><span class="icon-check">✓</span><span>Sistemas y lógicas de negocio (Backend).</span></li>
-              <li><span class="icon-check">✓</span><span>Diseño UX/UI nivel Silicon Valley.</span></li>
+              <li><span class="icon-check">✓</span><span data-i18n="about_phil_1">Arquitectura 100% a medida.</span></li>
+              <li><span class="icon-check">✓</span><span data-i18n="about_phil_2">Optimización para 60 FPS.</span></li>
+              <li><span class="icon-check">✓</span><span data-i18n="about_phil_3">Sistemas y lógicas de negocio (Backend).</span></li>
+              <li><span class="icon-check">✓</span><span data-i18n="about_phil_4">Diseño UX/UI nivel Silicon Valley.</span></li>
             </ul>
           </div>
         </div>
@@ -79,83 +114,83 @@
     <!-- Seccion: Servicios y Precios -->
     <section id="servicios" style="padding: 100px 40px 150px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; pointer-events: none;">
       <div style="text-align: center; margin-bottom: 60px; pointer-events: auto;">
-        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;">Planes de Desarrollo</h2>
-        <p style="color: var(--text-gray); font-size: 1.1rem;">Inversiones claras. Soluciones rentables.</p>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;" data-i18n="services_title">Planes de Desarrollo</h2>
+        <p style="color: var(--text-gray); font-size: 1.1rem;" data-i18n="services_subtitle">Inversiones claras. Soluciones rentables.</p>
       </div>
 
       <div class="comparison-grid" style="pointer-events: auto;">
         
         <!-- Plan 1 -->
         <div class="card-basic" style="text-align: center;">
-          <h3 class="card-title" style="margin-bottom: 5px;">Presencia Premium</h3>
-          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">Landing Page de Alto Impacto</p>
+          <h3 class="card-title" style="margin-bottom: 5px;" data-i18n="plan1_title">Presencia Premium</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;" data-i18n="plan1_desc">Landing Page de Alto Impacto</p>
           <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-            <li><span class="icon-check">✓</span><span>Diseño UX/UI responsivo (Mobile-First).</span></li>
-            <li><span class="icon-check">✓</span><span>Botón de WhatsApp flotante integrado.</span></li>
-            <li><span class="icon-check">✓</span><span>Animaciones fluidas base a 60 FPS.</span></li>
-            <li><span class="icon-check">✓</span><span>Optimización extrema de velocidad.</span></li>
-            <li><span class="icon-check">✓</span><span>Configuración de Hosting y Dominio.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan1_f1">Diseño UX/UI responsivo (Mobile-First).</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan1_f2">Botón de WhatsApp flotante integrado.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan1_f3">Animaciones fluidas base a 60 FPS.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan1_f4">Optimización extrema de velocidad.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan1_f5">Configuración de Hosting y Dominio.</span></li>
           </ul>
-          <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20me%20interesa%20cotizar%20el%20plan%20Presencia%20Premium." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+          <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20me%20interesa%20cotizar%20el%20plan%20Presencia%20Premium." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;" data-i18n="plan_btn">Solicitar</a>
         </div>
 
         <!-- Plan 2 (Destacado) -->
         <div class="card-premium" style="text-align: center; transform: scale(1.05); z-index: 2;">
-          <span class="card-tag tag-premium" style="display: inline-block; margin-bottom: 10px;">El Estándar Miller's</span>
-          <h3 class="card-title" style="margin-bottom: 5px;">Sistema Interactivo</h3>
-          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">App Web / Herramienta de Negocio</p>
+          <span class="card-tag tag-premium" style="display: inline-block; margin-bottom: 10px;" data-i18n="plan2_tag">El Estándar Miller's</span>
+          <h3 class="card-title" style="margin-bottom: 5px;" data-i18n="plan2_title">Sistema Interactivo</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;" data-i18n="plan2_desc">App Web / Herramienta de Negocio</p>
           <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Lógicas personalizadas (Colas en vivo, QR offline).</span></li>
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Integración FinTech (Pasarelas de Pago).</span></li>
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Panel de control privado seguro (Backend).</span></li>
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Base de datos en tiempo real.</span></li>
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Efectos visuales premium (Liquid Glass / Dark Mode).</span></li>
-            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span>Arquitectura propia sin mensualidades forzosas.</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f1">Lógicas personalizadas (Colas en vivo, QR offline).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f2">Integración FinTech (Pasarelas de Pago).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f3">Panel de control privado seguro (Backend).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f4">Base de datos en tiempo real.</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f5">Efectos visuales premium (Liquid Glass / Dark Mode).</span></li>
+            <li><span class="icon-check" style="color: var(--text-black);">✓</span><span data-i18n="plan2_f6">Arquitectura propia sin mensualidades forzosas.</span></li>
           </ul>
-          <a href="https://wa.me/593978961548?text=Hola,%20me%20interesa%20cotizar%20el%20Sistema%20Interactivo%20(El%20Estándar%20Miller's)." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto; background: #fff; color: #000; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Solicitar</a>
+          <a href="https://wa.me/593978961548?text=Hola,%20me%20interesa%20cotizar%20el%20Sistema%20Interactivo%20(El%20Estándar%20Miller's)." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto; background: #fff; color: #000; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" data-i18n="plan_btn">Solicitar</a>
         </div>
 
         <!-- Plan 3 -->
         <div class="card-basic" style="text-align: center;">
-          <h3 class="card-title" style="margin-bottom: 5px;">Plataforma Corporativa</h3>
-          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;">Múltiples Páginas / E-Commerce</p>
+          <h3 class="card-title" style="margin-bottom: 5px;" data-i18n="plan3_title">Plataforma Corporativa</h3>
+          <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 30px;" data-i18n="plan3_desc">Múltiples Páginas / E-Commerce</p>
           <ul class="card-list" style="text-align: left; margin-bottom: 30px;">
-            <li><span class="icon-check">✓</span><span>Arquitectura multi-página con SEO Avanzado.</span></li>
-            <li><span class="icon-check">✓</span><span>Catálogo dinámico de productos y servicios.</span></li>
-            <li><span class="icon-check">✓</span><span>Panel de administración autogestionable (CMS).</span></li>
-            <li><span class="icon-check">✓</span><span>Sistemas de reservas o cotización automatizada.</span></li>
-            <li><span class="icon-check">✓</span><span>Cuentas de correo corporativas empresariales.</span></li>
-            <li><span class="icon-check">✓</span><span>Integración de métricas (Google Analytics).</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f1">Arquitectura multi-página con SEO Avanzado.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f2">Catálogo dinámico de productos y servicios.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f3">Panel de administración autogestionable (CMS).</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f4">Sistemas de reservas o cotización automatizada.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f5">Cuentas de correo corporativas empresariales.</span></li>
+            <li><span class="icon-check">✓</span><span data-i18n="plan3_f6">Integración de métricas (Google Analytics).</span></li>
           </ul>
-          <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20me%20interesa%20la%20Plataforma%20Corporativa." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;">Solicitar</a>
+          <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20me%20interesa%20la%20Plataforma%20Corporativa." target="_blank" class="liquid-button" style="display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: auto;" data-i18n="plan_btn">Solicitar</a>
         </div>
 
       </div>
 
       <!-- Solicitud Personalizada (Solo una vez) -->
       <div style="margin-top: 60px; text-align: center; pointer-events: auto;">
-        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">¿Necesitas algo más complejo?</h3>
-        <p style="color: var(--text-gray); margin-bottom: 20px;">Sistemas ERP, SaaS, Integraciones con APIs o Arquitecturas Empresariales.</p>
-        <a href="https://wa.me/593978961548?text=Hola,%20tengo%20un%20proyecto%20complejo%20y%20quiero%20una%20Solicitud%20Personalizada." target="_blank" class="liquid-button" style="background: #111; color: #fff;">Solicitud Personalizada</a>
+        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;" data-i18n="custom_title">¿Necesitas algo más complejo?</h3>
+        <p style="color: var(--text-gray); margin-bottom: 20px;" data-i18n="custom_desc">Sistemas ERP, SaaS, Integraciones con APIs o Arquitecturas Empresariales.</p>
+        <a href="https://wa.me/593978961548?text=Hola,%20tengo%20un%20proyecto%20complejo%20y%20quiero%20una%20Solicitud%20Personalizada." target="_blank" class="liquid-button" style="background: #111; color: #fff;" data-i18n="custom_btn">Solicitud Personalizada</a>
       </div>
     </section>
 
     <!-- Seccion: Contacto / Footer (CORRECTAMENTE DENTRO DEL MAIN) -->
     <section id="contacto" style="padding: 250px 40px 80px; text-align: center; background: linear-gradient(to bottom, transparent 0%, #050505 250px, #050505 100%); color: #fff; pointer-events: auto; position: relative; z-index: 10;">
       <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 20px;">¿Listo para evolucionar?</h2>
-        <p style="color: rgba(255,255,255,0.6); font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px;">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 20px;" data-i18n="footer_title">¿Listo para evolucionar?</h2>
+        <p style="color: rgba(255,255,255,0.6); font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px;" data-i18n="footer_desc">
           Escríbenos directamente a WhatsApp. Te responderemos en minutos para agendar una consultoría técnica gratuita y analizar la viabilidad de tu proyecto.
         </p>
-        <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20vengo%20de%20su%20página%20web%20y%20me%20gustaría%20iniciar%20un%20proyecto." target="_blank" class="liquid-button" style="background: #fff; color: #000; font-size: 1.1rem; padding: 15px 40px; display: inline-block;">
+        <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20vengo%20de%20su%20página%20web%20y%20me%20gustaría%20iniciar%20un%20proyecto." target="_blank" class="liquid-button" style="background: #fff; color: #000; font-size: 1.1rem; padding: 15px 40px; display: inline-block;" data-i18n="footer_btn">
           Chatear por WhatsApp
         </a>
       </div>
       
       <div style="margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.4);">
         <div style="font-weight: 600; color: #fff;">Miller's<span style="color: rgba(255,255,255,0.5);">Code.</span></div>
-        <div>© 2026. Todos los derechos reservados.</div>
-        <div>Ecuador — Base de Operaciones</div>
+        <div data-i18n="footer_rights">© 2026. Todos los derechos reservados.</div>
+        <div data-i18n="footer_location">Ecuador — Base de Operaciones</div>
       </div>
     </section>
 
