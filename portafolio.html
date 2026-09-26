@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -11,44 +11,19 @@
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/portfolio.css">
-
-  <style>
-    .lang-selector {
-      display: flex;
-      gap: 8px;
-      margin-left: 20px;
-      align-items: center;
-    }
-    .lang-selector button {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: 0;
-      transition: opacity 0.3s ease, transform 0.2s ease;
-      opacity: 0.5;
-    }
-    .lang-selector button:hover {
-      transform: scale(1.2);
-      opacity: 0.8 !important;
-    }
-    @media (max-width: 768px) {
-      .lang-selector { margin-left: 0; margin-top: 10px; width: 100%; justify-content: center; }
-    }
-  </style>
   <script src="js/i18n.js"></script>
 </head>
 <body>
 
-  <!-- Canvas de fondo para las tarjetas -->
+  <!-- Background Interactive Canvas -->
   <canvas id="interactive-canvas"></canvas>
 
   <header class="minimal-nav">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+      <a href="index.html" class="brand-logo">
         Miller's<span class="brand-accent">Code</span><span class="brand-dot">.</span>
       </a>
-      <nav class="nav-links" style="display: flex; align-items: center; flex-wrap: wrap;">
+      <nav class="nav-links">
         <a href="index.html" class="liquid-link" data-i18n="nav_home">Inicio</a>
         <a href="portafolio.html" class="liquid-link" data-i18n="nav_portfolio">Portafolio</a>
         <a href="index.html#contacto" class="liquid-button" data-i18n="nav_contact">Contactar</a>
@@ -67,9 +42,9 @@
   <main class="page-scroll-container">
     
     <section class="portfolio-header">
-      <div style="max-width: 800px; margin: 0 auto;">
+      <div class="contact-container">
         <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 4.5rem);" data-i18n="port_title">Casos de Éxito / Laboratorio</h1>
-        <p class="hero-description" style="margin-top: 20px;" data-i18n="port_desc">
+        <p class="hero-description mt-20" data-i18n="port_desc">
           Exploración de lógicas avanzadas y sistemas interactivos construidos desde cero.
         </p>
       </div>
@@ -81,7 +56,7 @@
       <!-- PROYECTO 1 -->
       <article class="project-card">
         <!-- Badge de Categoría -->
-        <div style="margin-bottom: 20px;">
+        <div class="mb-20">
           <span class="card-tag tag-premium" data-i18n="port_p1_tag">Sistema Interactivo Musical</span>
         </div>
         
@@ -91,7 +66,7 @@
         </p>
         
         <!-- Tecnologías o Features -->
-        <div class="tech-stack" style="margin-bottom: 30px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <div class="tech-stack mb-30" style="display: flex; gap: 10px; flex-wrap: wrap;">
           <span class="tech-badge" data-i18n="port_p1_f1">Cola Musical en Vivo</span>
           <span class="tech-badge" data-i18n="port_p1_f2">Panel de Cabina (Secreto)</span>
           <span class="tech-badge" data-i18n="port_p1_f3">Lógica QR Offline</span>
@@ -102,40 +77,36 @@
           <!-- PC Mockup -->
           <div class="mockup-pc">
             <div class="mockup-screen">
-              <!-- Reemplaza src con tu captura real de PC -->
               <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="DJ Boris App en PC">
             </div>
           </div>
           <!-- Mobile Mockup -->
           <div class="mockup-mobile">
             <div class="mockup-screen">
-              <!-- Reemplaza src con tu captura real de Celular -->
               <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="DJ Boris App en Celular">
             </div>
           </div>
         </div>
 
         <div style="margin-top: 40px;">
-          <a href="#" class="liquid-button" style="background: #111; color: #fff;" data-i18n="port_btn">Ver Proyecto</a>
+          <a href="#" class="liquid-button btn-custom" data-i18n="port_btn">Ver Proyecto</a>
         </div>
       </article>
 
     </section>
 
-    <!-- Seccion: Contacto / Footer -->
-    <section id="contacto" style="padding: 250px 40px 80px; text-align: center; background: linear-gradient(to bottom, transparent 0%, #050505 250px, #050505 100%); color: #fff; pointer-events: auto; position: relative; z-index: 10;">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 20px;" data-i18n="footer_title">¿Listo para evolucionar?</h2>
-        <p style="color: rgba(255,255,255,0.6); font-size: 1.15rem; line-height: 1.6; margin-bottom: 40px;" data-i18n="footer_desc">
+    <!-- Footer -->
+    <section id="contacto" class="section-contact">
+      <div class="contact-container">
+        <h2 class="contact-title" data-i18n="footer_title">¿Listo para evolucionar?</h2>
+        <p class="contact-desc" data-i18n="footer_desc">
           Escríbenos directamente a WhatsApp. Te responderemos en minutos para agendar una consultoría técnica gratuita y analizar la viabilidad de tu proyecto.
         </p>
-        <a href="https://wa.me/593978961548?text=Hola%20Miller's%20Code,%20vengo%20de%20su%20página%20web%20y%20me%20gustaría%20iniciar%20un%20proyecto." target="_blank" class="liquid-button" style="background: #fff; color: #000; font-size: 1.1rem; padding: 15px 40px; display: inline-block;" data-i18n="footer_btn" data-wa="wa_footer">
-          Chatear por WhatsApp
-        </a>
+        <a href="https://wa.me/593978961548" target="_blank" class="liquid-button btn-whatsapp-light" data-i18n="footer_btn" data-wa="wa_footer">Chatear por WhatsApp</a>
       </div>
       
-      <div style="margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.4);">
-        <div style="font-weight: 600; color: #fff;">Miller's<span style="color: rgba(255,255,255,0.5);">Code.</span></div>
+      <div class="contact-footer">
+        <div class="font-weight-600 text-white">Miller's<span class="text-gray-500">Code.</span></div>
         <div data-i18n="footer_rights">© 2026. Todos los derechos reservados.</div>
         <div data-i18n="footer_location">Ecuador — Base de Operaciones</div>
       </div>
