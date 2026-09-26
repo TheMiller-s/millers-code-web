@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio — Miller's Code</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+  <!-- Reutilizamos el Canvas Interactivo -->
+  <canvas id="interactive-canvas"></canvas>
+
+  <!-- Navegación -->
+  <header class="minimal-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        Miller's<span class="brand-accent">Code</span><span class="brand-dot">.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="liquid-link">Inicio</a>
+        <a href="portafolio.html" class="liquid-link">Portafolio</a>
+        <a href="index.html#contacto" class="liquid-button">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR DE SCROLL (MÁSCARA DE DESVANECIMIENTO) -->
+  <main class="page-scroll-container">
+    <!-- Sección Principal: El Portafolio (Vitrina) -->
+    <section class="showcase-section" style="padding: 160px 40px 60px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h1 style="font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 15px;">Experiencias Digitales</h1>
+        <p style="color: var(--text-gray); font-size: 1.25rem;">Software a medida que transforma negocios.</p>
+      </div>
+
+      <!-- Proyecto 1 (DJ Web App) -->
+      <div class="project-card" style="background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(255, 255, 255, 1); border-radius: 32px; padding: 50px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9); display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+        
+        <div style="flex: 1; min-width: 300px;">
+          <span class="card-tag tag-premium" style="margin-bottom: 10px;">Aplicación Web / Entretenimiento</span>
+          <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Sistema Interactivo <br>para Eventos VIP</h2>
+          <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+            Plataforma de alto impacto visual (Dark Mode & Glassmorphism) construida para gestionar colas de peticiones musicales en tiempo real. Integra validación de pagos (PayPhone), reproductor de audio reactivo y un panel de administración secreto para el control en vivo.
+          </p>
+          <a href="https://dj-boris-30w1igtde-tmks.vercel.app/" target="_blank" class="liquid-button">Ver Proyecto en Pantalla Completa</a>
+        </div>
+
+        <!-- Detalles Técnicos Premium (Reemplazo de la foto) -->
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+          
+          <!-- Insignia 1 -->
+          <div style="background: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.7); border-radius: 20px; padding: 25px 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.03), inset 0 1px 1px rgba(255,255,255,1); display: flex; align-items: center; gap: 20px; transition: transform 0.3s;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #111; box-shadow: 0 0 10px rgba(0,0,0,0.2);"></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: #111; margin-bottom: 4px; letter-spacing: -0.5px;">Cola Musical en Vivo</h4>
+              <p style="font-size: 0.95rem; color: #555; line-height: 1.4;">Sistema de peticiones con turnos estrictos y saltos de regla VIP.</p>
+            </div>
+          </div>
+
+          <!-- Insignia 2 (Desplazada para diseño asimétrico elegante) -->
+          <div style="background: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.7); border-radius: 20px; padding: 25px 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.03), inset 0 1px 1px rgba(255,255,255,1); display: flex; align-items: center; gap: 20px; margin-left: 40px; transition: transform 0.3s;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #111; box-shadow: 0 0 10px rgba(0,0,0,0.2);"></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: #111; margin-bottom: 4px; letter-spacing: -0.5px;">Panel Cabina Secreto</h4>
+              <p style="font-size: 0.95rem; color: #555; line-height: 1.4;">Acceso privado protegido por PIN para gestionar el flujo del evento.</p>
+            </div>
+          </div>
+
+          <!-- Insignia 3 -->
+          <div style="background: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.7); border-radius: 20px; padding: 25px 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.03), inset 0 1px 1px rgba(255,255,255,1); display: flex; align-items: center; gap: 20px; transition: transform 0.3s;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #111; box-shadow: 0 0 10px rgba(0,0,0,0.2);"></div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: #111; margin-bottom: 4px; letter-spacing: -0.5px;">Código QR Offline</h4>
+              <p style="font-size: 0.95rem; color: #555; line-height: 1.4;">Generador de menús interactivos sin depender de internet.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Comparación (Movida hacia abajo) -->
+    <section class="portfolio-section" style="padding: 100px 40px 100px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; pointer-events: none;">
+      <div class="portfolio-container" style="pointer-events: auto;">
+        
+        <div class="portfolio-header">
+          <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -1.5px;">Diseño Común vs. <br>Desarrollo Interactivo</h2>
+          <p>No somos una fábrica de plantillas. Descubre por qué las marcas premium prefieren sistemas construidos a medida.</p>
+        </div>
+
+        <div class="comparison-grid">
+          
+          <!-- Tarjeta: Lo tradicional -->
+          <div class="card-basic">
+            <span class="card-tag tag-basic">Web Tradicional</span>
+            <h3 class="card-title">La página "folleto"</h3>
+            <ul class="card-list">
+              <li><span class="icon-x">✕</span><span><strong>Plantillas repetidas:</strong> Tu negocio se ve exactamente igual que el de tu competencia.</span></li>
+              <li><span class="icon-x">✕</span><span><strong>Cero interactividad:</strong> El usuario entra, lee texto estático y se va a los 10 segundos.</span></li>
+              <li><span class="icon-x">✕</span><span><strong>Alquiler eterno:</strong> Pagas mensualidades abusivas a plataformas (Shopify/Wix) por plugins básicos.</span></li>
+              <li><span class="icon-x">✕</span><span><strong>Solo presencia:</strong> Funciona como una tarjeta de presentación que no genera interacción real.</span></li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta: Miller's Code -->
+          <div class="card-premium">
+            <span class="card-tag tag-premium">El Estándar Miller's</span>
+            <h3 class="card-title">Herramientas de Negocio</h3>
+            <ul class="card-list">
+              <li><span class="icon-check">✓</span><span><strong>Código a medida:</strong> Interfaces únicas diseñadas para tu identidad visual.</span></li>
+              <li><span class="icon-check">✓</span><span><strong>Retención interactiva:</strong> Animaciones fluidas a 60 FPS y micro-interacciones que enamoran.</span></li>
+              <li><span class="icon-check">✓</span><span><strong>Propiedad 100%:</strong> Tú eres el dueño de tu código. Sin pagos mensuales forzosos.</span></li>
+              <li><span class="icon-check">✓</span><span><strong>Sistemas integrados:</strong> Pasarelas de pago, colas en vivo, paneles de control privados.</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reutilizamos la lógica del Canvas -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

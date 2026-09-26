@@ -1,0 +1,133 @@
+/* --- PORTFOLIO SECTION (COMPARISON) --- */
+.portfolio-section {
+  padding: 160px 40px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.portfolio-container {
+  pointer-events: auto;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--text-black);
+}
+
+.portfolio-header p {
+  color: var(--text-gray);
+  font-size: 1.2rem;
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* La cuadrícula de 2 columnas */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* Tarjeta Izquierda (Diseño Tradicional) */
+.card-basic {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 32px;
+  padding: 50px 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: transform 0.3s;
+}
+
+/* Tarjeta Derecha (La Experiencia Miller's) */
+.card-premium {
+  /* Efecto Apple Liquid Glass en formato grande */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 32px;
+  padding: 50px 40px;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s;
+  
+  /* OPTIMIZACIÓN GPU: Evita que el blur colapse los FPS cuando el canvas se mueve atrás */
+  will-change: transform, backdrop-filter;
+  transform: translateZ(0);
+}
+
+.card-basic:hover, .card-premium:hover {
+  transform: translateY(-5px);
+}
+
+.card-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.tag-basic { color: #999; }
+.tag-premium { color: #000; }
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.card-list {
+  list-style: none;
+}
+
+.card-list li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.card-basic .card-list li {
+  color: var(--text-gray);
+}
+
+.card-premium .card-list li {
+  color: var(--text-black);
+  font-weight: 600;
+}
+
+/* Iconos de la lista */
+.icon-x { color: #ff4d4d; font-weight: bold; }
+.icon-check { color: #000000; font-weight: bold; }
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-basic, .card-premium {
+    padding: 30px 20px;
+  }
+}
+
+.project-card { will-change: transform, backdrop-filter; transform: translateZ(0); }
+
