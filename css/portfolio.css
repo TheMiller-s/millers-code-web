@@ -43,7 +43,7 @@
 
 /* Tarjeta Izquierda (Diseño Tradicional) */
 .card-basic { display: flex; flex-direction: column;
-  background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px) saturate(180%); -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 32px;
   padding: 50px 40px;
@@ -54,9 +54,7 @@
 /* Tarjeta Derecha (La Experiencia Miller's) */
 .card-premium { display: flex; flex-direction: column;
   /* Efecto Apple Liquid Glass en formato grande */
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 32px;
   padding: 50px 40px;
@@ -67,7 +65,7 @@
   transition: transform 0.3s;
   
   /* OPTIMIZACIÓN GPU: Evita que el blur colapse los FPS cuando el canvas se mueve atrás */
-  will-change: transform, backdrop-filter;
+  will-change: transform;
   transform: translateZ(0);
 }
 
@@ -140,7 +138,7 @@
   }
 }
 
-.project-card { will-change: transform, backdrop-filter; transform: translateZ(0); }
+.project-card { will-change: transform; transform: translateZ(0); }
 
 
 
