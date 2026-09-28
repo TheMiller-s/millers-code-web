@@ -76,7 +76,7 @@ const translations = {
     comp_card2_title: "Herramientas de Negocio",
     comp_card2_f1: "<strong>C\u00f3digo a medida:</strong> Interfaces \u00fanicas dise\u00f1adas para tu identidad visual.",
     comp_card2_f2: "<strong>Retenci\u00f3n interactiva:</strong> Animaciones fluidas a 60 FPS y micro-interacciones que enamoran.",
-    comp_card2_f3: "<strong>Propiedad 100%:</strong> T\u00fa eres el due\u00f1o de tu c\u00f3digo. Sin pagos mensuales forzosos.",
+    comp_card2_f3: "<strong>Propiedad 100%:</strong> T\u00fa eres el due\u00f1o de tu c\u00f3digo. Sin pagos mensuales forzosos.*",
     comp_card2_f4: "<strong>Sistemas integrados:</strong> Pasarelas de pago, colas en vivo, paneles de control privados.",
 
     wa_plan1: "Hola Miller's Code, me interesa cotizar el plan Presencia Premium.",
@@ -162,7 +162,7 @@ const translations = {
     comp_card2_title: "Business Tools",
     comp_card2_f1: "<strong>Custom code:</strong> Unique interfaces designed for your visual identity.",
     comp_card2_f2: "<strong>Interactive retention:</strong> Fluid animations at 60 FPS and micro-interactions that captivate.",
-    comp_card2_f3: "<strong>100% Ownership:</strong> You own your code. No forced monthly payments.",
+    comp_card2_f3: "<strong>100% Ownership:</strong> You own your code. No forced monthly payments.*",
     comp_card2_f4: "<strong>Integrated systems:</strong> Payment gateways, live queues, private control panels.",
 
     wa_plan1: "Hi Miller's Code, I'm interested in the Premium Presence plan.",
@@ -248,7 +248,7 @@ const translations = {
     comp_card2_title: "Gesch\u00e4ftswerkzeuge",
     comp_card2_f1: "<strong>Ma\u00dfgeschneiderter Code:</strong> Einzigartige Schnittstellen, die f\u00fcr Ihre visuelle Identit\u00e4t entwickelt wurden.",
     comp_card2_f2: "<strong>Interaktive Bindung:</strong> Fl\u00fcssige Animationen mit 60 FPS und Mikro-Interaktionen, die fesseln.",
-    comp_card2_f3: "<strong>100% Eigentum:</strong> Ihnen geh\u00f6rt Ihr Code. Keine erzwungenen monatlichen Zahlungen.",
+    comp_card2_f3: "<strong>100% Eigentum:</strong> Ihnen geh\u00f6rt Ihr Code. Keine erzwungenen monatlichen Zahlungen.*",
     comp_card2_f4: "<strong>Integrierte Systeme:</strong> Zahlungs-Gateways, Live-Warteschlangen, private Kontrollfelder.",
 
     wa_plan1: "Hallo Miller's Code, ich interessiere mich f\u00fcr den Plan Premium-Pr\u00e4senz.",
@@ -334,7 +334,7 @@ const translations = {
     comp_card2_title: "Outils de D\u00e9veloppement",
     comp_card2_f1: "<strong>Code sur mesure :</strong> Interfaces uniques con\u00e7ues pour votre identit\u00e9 visuelle.",
     comp_card2_f2: "<strong>R\u00e9tention interactive :</strong> Animations fluides \u00e0 60 FPS et micro-interactions qui captivent.",
-    comp_card2_f3: "<strong>100% Propri\u00e9t\u00e9 :</strong> Vous poss\u00e9dez votre code. Pas de paiements mensuels forc\u00e9s.",
+    comp_card2_f3: "<strong>100% Propri\u00e9t\u00e9 :</strong> Vous poss\u00e9dez votre code. Pas de paiements mensuels forc\u00e9s.*",
     comp_card2_f4: "<strong>Syst\u00e8mes int\u00e9gr\u00e9s :</strong> Passerelles de paiement, files d'attente en direct, panneaux de contr\u00f4le priv\u00e9s.",
 
     wa_plan1: "Bonjour Miller's Code, je suis int\u00e9ress\u00e9 par le plan Pr\u00e9sence Premium.",
@@ -420,7 +420,7 @@ const translations = {
     comp_card2_title: "Ferramentas de Neg\u00f3cios",
     comp_card2_f1: "<strong>C\u00f3digo sob medida:</strong> Interfaces \u00fanicas desenhadas para sua identidade visual.",
     comp_card2_f2: "<strong>Reten\u00e7\u00e3o interativa:</strong> Anima\u00e7\u00f5es fluidas a 60 FPS e micro-intera\u00e7\u00f5es que cativam.",
-    comp_card2_f3: "<strong>Propriedade 100%:</strong> Voc\u00ea \u00e9 dono do seu c\u00f3digo. Sem pagamentos mensais for\u00e7ados.",
+    comp_card2_f3: "<strong>Propriedade 100%:</strong> Voc\u00ea \u00e9 dono do seu c\u00f3digo. Sem pagamentos mensais for\u00e7ados.*",
     comp_card2_f4: "<strong>Sistemas integrados:</strong> Gateways de pagamento, filas ao vivo, pain\u00e9is de controle privados.",
 
     wa_plan1: "Ol\u00e1 Miller's Code, tenho interesse em cotar o plano Presen\u00e7a Premium.",
